@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Genetic Consultancy and Counselling Clinic</title>
+    <link rel="stylesheet" href="styles.css">
+
+</head>
+<body>
+  
+    <div class="navbar"id="navbar">
+        <a href="#" onclick="openHome()">Home</a>
+        <a href="#" onclick="openAboutUs()">About</a>
+        <a href="#" onclick="openRegistration()">Appointment</a>
+        <a href="#" onclick="openContactUs()">Contact</a>
+        <a href="#" onclick="openFAQ()">FAQ's</a>
+
+      </div>
+      <div class="toggle-menu">
+        <span class="toggle-icon" onclick="toggleNavbar()">&#9776;</span>
+        <div class="toggle-links" id="toggleLinks">
+            <a href="#" onclick="openHome()">Home</a>
+            <a href="#" onclick="openAboutUs()">About</a>
+            <a href="#" onclick="openRegistration()">Appointment</a>
+            <a href="#" onclick="openContactUs()">Contact</a>
+            <a href="#" onclick="openFAQ()">FAQ's</a>
+        </div>
+    </div>
+      
+      <!-- Genetic Counseling Section -->
+      <div id="home-section"class="main-section">
+        <div class="image-container">
+          <img src="no1.webp" alt="Image 1">
+          <img src="no2.webp" alt="Image 2">
+          <img src="no3.webp" alt="Image 3">
+          <img src="no4.webp" alt="Image 4">
+          <img src="no5.webp" alt="Image 5">
+          <img src="no1about.webp" alt="Image 6">
+          <img src="no2about.webp" alt="Image 7">
+          <img src="no3about.webp" alt="Image 8">
+          <img src="no4about.webp" alt="Image 9">
+          <img src="no5about.webp" alt="Image 0">
+          <img src="no6about.webp" alt="Image 09">
+          <img src="no7about.webp" alt="Image 08">
+          <img src="no8about.webp" alt="Image 07">
+        </div>
+          <div class="heading">
+            <h2>Genetic Counseling</h2>
+            <h3>Hover on the Pictures to see who we are and what we do!!!</h3>
+          </div>
+          <div class="gene">
+
+            <div class="no1">
+              <h1 class="no1h2">Genetic Counseling</h1>
+              <p>
+                Genetic counseling offers expert guidance to individuals and families, helping them understand and adapt to the genetic implications of diseases, facilitating informed decisions and risk assessment.
+                </p>
+            </div>
+            <div class="no2">
+              <h1 class="no2h1">Who Needs It</h1>
+              <li class="no2li">Couples planning pregnancy, assessing risks for hereditary disorders.</li>
+              <li class="no2li">Families with affected children planning future pregnancies.</li>
+              <li class="no2li">First-time parents-to-be understanding child's disease susceptibility.</li>
+              <li class="no2li">Late-life pregnancy considerations for genetic risks.</li>
+              <li class="no2li">Genetic risks evaluation for cousin/caste marriages.</li>
+            </div>
+            <div class="no3">
+              <h1 class="no3h1">What does a Counsellor do?</h1>
+              <li class="no3li">Offers disease information</li>
+              <li class="no3li">Uses pedigrees for transmission clarity</li>
+              <li class="no3li">Estimates offspring risks</li>
+              <li class="no3li">Explains disease process and discusses genetic testing</li>
+              <li class="no3li">Suggests referrals and procedures</li>
+              
+            </div>
+            <div class="no4">
+              <h1 class="no4h1">Our Services</h1>
+              <li class="no4li">Pediatric Genetics (childhood disorders), Oncogenetics (cancer genetics), Reproductive Genetics, Neurogenetics
+               </li>
+              <li class="no4li">Cystic Fibrosis, Down Syndrome, Thalassemia, Haemophilia, Cancers</li>
+            </div>
+          </div>
+
+      </div>
+   
+    </div>
+      <!-- Footer -->
+      <div class="footer">
+        &copy; 2023 Dr. XYZ. All rights reserved.
+      </div>
+      <script>
+        function openHome() {
+    window.open('../home/index.html',);
+}
+function openAboutUs(){
+    window.open('../about/about.html');
+}
+function openRegistration(){
+    window.open('../home/register.html');
+}
+function openContactUs(){
+    window.open('../contact/cont.html');
+}
+function openFAQ(){
+  window.open('../FAQ/faq.html');
+}
+const images = document.querySelectorAll('.image-container img');
+let currentImageIndex = 0;
+
+function showNextImage() {
+  images[currentImageIndex].style.opacity = '0';
+  
+  // Increment currentImageIndex
+  currentImageIndex = (currentImageIndex + 1) % images.length;
+
+  // Show the next image
+  images[currentImageIndex].style.opacity = '1';
+
+  // Hide previous image after transition
+  images[currentImageIndex].addEventListener('transitionend', () => {
+    images[(currentImageIndex + images.length - 1) % images.length].style.opacity = '0';
+  });
+}
+setInterval(showNextImage, 5000);
+function toggleNavbar() {
+    const toggleLinks = document.getElementById('toggleLinks');
+    toggleLinks.classList.toggle('show');
+}
+  
+      </script>
+</body>
+</html>

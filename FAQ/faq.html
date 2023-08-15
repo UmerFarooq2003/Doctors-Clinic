@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>FAQ || Genetic Consultancy and Counselling Clinic</title>
+    <style>
+        /* Reset some default styles */
+/* Reset some default styles */
+body, h1, h2, h3, p {
+    margin: 0;
+    padding: 0;
+}
+
+/* Basic styling */
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    background-color: #f4f4f4;
+}
+
+header {
+    /* background-color: #ffffff; */
+    color: #007bff;
+    text-align: center;
+    padding: 1rem;
+}
+
+
+
+main {
+    max-width: 800px;
+    margin: auto;
+    padding: 2rem;
+}
+
+.faq {
+    border: 1px solid #ccc;
+    padding: 1rem;
+    margin-bottom: 1rem;
+    background-color: #fff;
+}
+
+.faq h2 {
+    font-size: 1.5rem;
+    text-align: center;
+    margin-bottom: 1rem;
+    color: black;
+}
+
+.question {
+    margin-bottom: 1rem;
+}
+
+.question h3 {
+    font-size: 1.2rem;
+    margin-bottom: 0.5rem;
+    color: black;
+}
+
+.question p {
+    font-size: 1rem;
+    color: #000;
+}
+
+footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 1rem;
+}
+body, h1, h2, h3, p, ul, li {
+    margin: 0;
+    padding: 0;
+  }
+  body, h1, h2, h3, p, ul, li {
+    margin: 0;
+    padding: 0;
+  }
+
+  body {
+    text-decoration: none;
+    list-style: none;
+    font-family: Arial, sans-serif;
+  }
+  
+  .navbar {
+    background-color: #333;
+    color: #fff;
+    padding: 10px;
+    text-align: center;
+
+  }
+  
+  .navbar a {
+    font-weight: bold;
+    color: #fff;
+    text-decoration: none;
+    margin: 0 15px;
+  }
+  /* Original navbar styles (unchanged) */
+.navbar {
+  background-color: #ffffff;
+  color: #fff;
+  padding: 15px;
+  text-align: center;
+}
+.toggle-menu {
+    display: none;
+    justify-content: flex-end;
+    align-items: center;
+    background-color: #ffffff;
+    padding: 10px;
+}
+
+.toggle-icon {
+    font-size: 24px;
+    color: #007bff;
+    cursor: pointer;
+}
+
+.toggle-icon:hover {
+  /* animation: slideIn 0.3s forwards; */
+  color: black;
+  
+}
+.toggle-links {
+    display: none;
+    flex-direction: column;
+    background-color: #ffffff;
+    padding: 10px;
+}
+.toggle-links a{
+  color: #007bff;
+  text-decoration: none;
+  margin: 5px;
+}
+.toggle-links a::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 2px;
+  background-color: black; /* Initial background color (transparent) */
+  bottom: -6px; /* Position it below the link */
+  left: 0;
+  transform: scaleX(0); /* Start with no width */
+  transform-origin: left center;
+  transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+.toggle-links a:hover {
+  animation: slideIn 0.3s forwards;
+  color: black;
+  
+}
+
+.toggle-links a:hover::before {
+  transform: scaleX(1); /* Expand the width on hover */
+  background-color: black; /* Change the background color on hover */
+}
+.toggle-links.show {
+    display: flex;
+    transition: max-height 0.3s ease-in-out, opacity 0.3s ease-in-out 0.3s;
+}
+
+/* Media query for screens narrower than 600px */
+@media (max-width: 600px) {
+    .navbar {
+        display: none;
+    }
+
+    .toggle-menu {
+        display: flex;
+    }
+}
+.navbar a {
+  color: #007bff;
+  text-decoration: none;
+  margin: 0 20px;
+  position: relative;
+  transition: color 0.3s ease, transform 0.3s ease;
+}
+
+/* Add animation on hover */
+.navbar a::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 2px;
+  background-color: black; /* Initial background color (transparent) */
+  bottom: -6px; /* Position it below the link */
+  left: 0;
+  transform: scaleX(0); /* Start with no width */
+  transform-origin: left center;
+  transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+.navbar a:hover {
+  animation: slideIn 0.3s forwards;
+  color: black;
+  
+}
+
+.navbar a:hover::before {
+  transform: scaleX(1); /* Expand the width on hover */
+  background-color: black; /* Change the background color on hover */
+}
+    </style>
+</head>
+<body><div class="toggle-menu">
+    <span class="toggle-icon" onclick="toggleNavbar()">&#9776;</span>
+    <div class="toggle-links" id="toggleLinks">
+        <a href="#" onclick="openHome()">Home</a>
+        <a href="#" onclick="openAboutUs()">About</a>
+        <a href="#" onclick="openRegistration()">Appointment</a>
+        <a href="#" onclick="openContactUs()">Contact</a>
+        <a href="#" onclick="openFAQ()">FAQ's</a>
+    </div>
+</div>
+    <div class="navbar">
+        <a href="#" onclick="openHome()">Home</a>
+        <a href="#" onclick="openAboutUs()">About</a>
+        <a href="#" onclick="openRegistration()">Appointment</a>
+        <a href="#" onclick="openContactUs()">Contact</a>
+        <a href="#" onclick="openFAQ()">FAQ's</a>
+
+      </div>
+    <header>
+        <h1>Genetic Consultancy and Counselling Clinic</h1>
+    </header>
+    <!-- <nav>
+        Navigation links if needed
+    </nav> -->
+    <main>
+        <section class="faq">
+            <h2>Frequently Asked Questions</h2>
+            <div class="question">
+                <h3>What is genetic counselling?</h3>
+                <p>Genetic counselling is the process of assessing and understanding a person’s risk of hereditary cancer...</p>
+            </div>
+            <div class="question">
+                <h3>What is genetic testing?</h3>
+                <p>Genetic testing is the process of analyzing an individual's DNA to identify potential genetic mutations...</p>
+            </div>
+            <div class="question">
+                <h3>How does the Genetic Consultancy and Counselling Clinic (G3C) work?</h3>
+                <p>Genetic consultations with a clinical geneticist usually comprise...</p>
+            </div>
+            <div class="question">
+                <h3>How does Genetic Counsellor help you?</h3>
+                <p>A Genetic Counsellor...</p>
+            </div>
+            <div class="question">
+                <h3>Why is genetic counselling helpful for genetic testing?</h3>
+                <p>There are many different genetic tests available...</p>
+            </div>
+            <div class="question">
+                <h3>What is consanguinity?</h3>
+                <p>Consanguinity means descendants of the same ancestors...</p>
+            </div>
+            <div class="question">
+                <h3>Why is consanguinity important in genetic diseases?</h3>
+                <p>Many studies have highlighted the harmful effects of consanguinity or cousin marriages on reproductive behaviour and incidence of hereditary conditions...</p>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <div class="footer">
+            &copy; 2023 Dr. XYZ. All rights reserved.
+          </div>
+    </footer>
+    <script>
+function toggleNavbar() {
+    const toggleLinks = document.getElementById('toggleLinks');
+    toggleLinks.classList.toggle('show');
+}
+        function openHome() {
+            window.open('../home/index.html',);
+    }
+    function openAboutUs(){
+        window.open('../about/about.html');
+    }
+    function openRegistration(){
+        window.open('../home/register.html');
+    }
+    function openContactUs(){
+        window.open('../contact/cont.html');
+    }
+    function openFAQ(){
+        window.open('../FAQ/faq.html');
+    }
+    </script>
+</body>
+</html>

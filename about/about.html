@@ -1,0 +1,559 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us || Genetic Consultancy and Counselling Clinic</title>
+    <style>
+        .footer {
+    background-color: #333;
+    color: #fff;
+    padding: 15px;
+    text-align: center;
+  }
+        body, h1, h2, h3, p, ul, li {
+    margin: 0;
+    padding: 0;
+  }
+
+  body {
+    text-decoration: none;
+    list-style: none;
+    font-family: Arial, sans-serif;
+  }
+  
+  .navbar {
+    background-color: #333;
+    color: #fff;
+    padding: 10px;
+    text-align: center;
+
+  }
+  
+  .navbar a {
+    font-weight: bold;
+    color: #fff;
+    text-decoration: none;
+    margin: 0 15px;
+  }
+  /* Original navbar styles (unchanged) */
+.navbar {
+  background-color: #ffffff;
+  color: #fff;
+  padding: 15px;
+  text-align: center;
+}
+
+.navbar a {
+  color: #007bff;
+  text-decoration: none;
+  margin: 0 20px;
+  position: relative;
+  transition: color 0.3s ease, transform 0.3s ease;
+}
+
+/* Add animation on hover */
+.navbar a::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 2px;
+  background-color: black; /* Initial background color (transparent) */
+  bottom: -6px; /* Position it below the link */
+  left: 0;
+  transform: scaleX(0); /* Start with no width */
+  transform-origin: left center;
+  transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+.navbar a:hover {
+  animation: slideIn 0.3s forwards;
+  color: black;
+  
+}
+
+.navbar a:hover::before {
+  transform: scaleX(1); /* Expand the width on hover */
+  background-color: black; /* Change the background color on hover */
+}
+@keyframes slideIn {
+  0% {
+      opacity: 0;
+      transform: translateX(-20px);
+  }
+  100% {
+      opacity: 1;
+      transform: translateX(0);
+  }
+}
+.navbar a {
+  animation: slideIn 1s ease-in-out;
+  animation-fill-mode: both;
+  animation-delay: calc(var(--animation-order) * 0.15s);
+}
+.navbar:nth-child(1) {
+  --animation-order: 1;
+}
+
+.navbar:nth-child(2) {
+  --animation-order: 2;
+}
+
+.navbar:nth-child(3) {
+  --animation-order: 3;
+}
+
+.navbar:nth-child(4) {
+  --animation-order: 4;
+}
+  .image-container {
+    width: 100%; /* Adjust the container width as needed */
+    height: 500px; /* Adjust the container height as needed */
+    overflow: hidden;
+    position: relative;
+    margin-bottom: 30px;
+  }
+  .toggle-menu {
+    display: none;
+    justify-content: flex-end;
+    align-items: center;
+    background-color: #ffffff;
+    padding: 10px;
+}
+
+.toggle-icon {
+    font-size: 24px;
+    color: #007bff;
+    cursor: pointer;
+}
+
+.toggle-icon:hover {
+  /* animation: slideIn 0.3s forwards; */
+  color: black;
+  
+}
+.toggle-links {
+    display: none;
+    flex-direction: column;
+    background-color: #ffffff;
+    padding: 10px;
+}
+.toggle-links a{
+  color: #007bff;
+  text-decoration: none;
+  margin: 5px;
+}
+.toggle-links a::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 2px;
+  background-color: black; /* Initial background color (transparent) */
+  bottom: -6px; /* Position it below the link */
+  left: 0;
+  transform: scaleX(0); /* Start with no width */
+  transform-origin: left center;
+  transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+.toggle-links a:hover {
+  animation: slideIn 0.3s forwards;
+  color: black;
+  
+}
+
+.toggle-links a:hover::before {
+  transform: scaleX(1); /* Expand the width on hover */
+  background-color: black; /* Change the background color on hover */
+}
+.toggle-links.show {
+    display: flex;
+    transition: max-height 0.3s ease-in-out, opacity 0.3s ease-in-out 0.3s;
+}
+
+/* Media query for screens narrower than 600px */
+@media (max-width: 600px) {
+    .navbar {
+        display: none;
+    }
+
+    .toggle-menu {
+        display: flex;
+    }
+}
+  /* Styles for the images */
+  .image-container img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0;
+    transition: opacity 1s ease-in-out;
+    z-index: 0;
+  }
+  .heading h2 {
+    font-size: 36px;
+    font-weight: bold;
+    color: #007bff;
+    font-family: 'Times New Roman', Times, serif;
+    /* background-color: #007bff; */
+    padding: 20px;
+    margin: 0;
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  h3{
+    font-weight: bold;
+    font-family: 'Times New Roman', Times, serif;
+    color: #007bff;
+    font-size: 28px;
+
+  }
+  /* Show the first image */
+  .image-container img:first-child {
+    opacity: 1;
+  }
+  
+  /* Main section styles */
+  .main-section {
+    list-style: none;
+
+    padding-top: 5px;
+    padding-bottom: 50px;
+    text-align: center;
+    background-color: #f7f7f7;
+  }
+  .about{
+        margin: 60px;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+      }
+      .who{
+        margin: 20px;
+        margin-bottom: 70px;
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        justify-content: center;
+        text-align: center;
+        align-items: center;
+        color: #007bff;
+      }
+      .who p{
+        color: rgb(37, 37, 37);
+        text-align: justify;
+        font-style: italic;
+      }
+      .boxes{
+        margin: 10px;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-evenly;
+
+      }
+      .box1{
+        text-align: center;
+        align-items: center;
+        margin: auto auto;
+        border-radius: 6px;
+        margin: 10px;
+        width:400px;
+        height: 400px;
+        background-image: url(gene5.webp);
+    transition: 0.5s;
+        /* background-color: red; */
+      }
+      .box2{
+        border-radius: 6px;
+        margin: 10px;
+        width:400px;
+        height: 400px;
+        /* background-color: red; */
+        background-image: url(gene2.webp);
+
+      }.box3{
+        border-radius: 6px;
+        margin: 10px;
+        width:400px;
+        height: 400px;
+        background-image: url(gene3.webp);
+        /* background-color: red; */
+      }.box4{
+        border-radius: 6px;
+        margin: 10px;
+        width:400px;
+        height: 400px;
+        background-image: url(gene4.webp);
+        /* background-color: red; */
+      }.box5{
+        border-radius: 6px;
+        margin: 10px;
+        width:400px;
+        height: 400px;
+        background-image: url(gene1.webp);
+        /* background-color: red; */
+      }.box6{
+        border-radius: 6px;
+        margin: 10px;
+        width:400px;
+        height: 400px;
+        background-image: url(gene6.webp);
+        /* background-color: red; */
+      }.box7{
+        margin: 10px;
+        border-radius: 6px;
+        width:400px;
+        height: 400px;
+        background-image: url(gene7.webp);
+        /* background-color: red; */
+      }
+      .box8{
+        border-radius: 6px;
+        margin: 10px;
+        width:400px;
+        height: 400px;
+        background-image: url(gene8.webp);
+        /* background-color: red; */
+      }.box9{
+        margin: 10px;
+        border-radius: 6px;
+        width:400px;
+        height: 400px;
+        background-image: url(gene9.webp);
+        /* background-color: red; */
+      }
+      .box1 p,.box2 p,.box3 p,.box4 p,.box5 p,.box6 p,.box7 p,.box8 p,.box9 p{
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        margin: auto auto;
+        color: white;
+        opacity: 0;
+
+      }
+      .box1:hover,.box2:hover,.box3:hover,.box4:hover,.box5:hover,.box6:hover,.box7:hover,.box8:hover,.box9:hover
+   {
+    box-shadow: inset 700px 0 0 0 #000000;
+    transition: 0.5s;
+  }
+  .box1 h3,.box2 h3,.box3 h3,.box4 h3,.box5 h3,.box6 h3,.box7 h3,.box8 h3,.box9 h3{
+    font-weight: bolder;
+    opacity: 0;
+    margin: 10px;
+
+  }
+  .box1:hover p,.box2:hover p,.box3:hover p,.box4:hover p,.box5:hover p,.box6:hover p,.box7:hover p,.box8:hover p,.box9:hover p{
+        margin-top: 60px;
+    opacity: 1;
+    transition: 2.5s;
+
+  }
+  .box1:hover h3,
+  .box2:hover h3,
+  .box3:hover h3,
+  .box4:hover h3,
+  .box5:hover h3,.box6:hover h3,.box7:hover h3,.box8:hover h3,.box9:hover h3{
+    opacity: 1;
+  }
+
+        @media (max-width:800px){
+        .about{
+          flex-direction: column;
+        }
+        .heading h2{
+          font-size: 24px;
+        }
+        .heading h3{
+          font-size: 18px;
+        }
+      }
+    </style>
+</head>
+<body><div class="toggle-menu">
+  <span class="toggle-icon" onclick="toggleNavbar()">&#9776;</span>
+  <div class="toggle-links" id="toggleLinks">
+      <a href="#" onclick="openHome()">Home</a>
+      <a href="#" onclick="openAboutUs()">About</a>
+      <a href="#" onclick="openRegistration()">Appointment</a>
+      <a href="#" onclick="openContactUs()">Contact</a>
+      <a href="#" onclick="openFAQ()">FAQ's</a>
+  </div>
+</div>
+    <div class="navbar">
+        <a href="#" onclick="openHome()">Home</a>
+        <a href="#" onclick="openAboutUs()">About</a>
+        <a href="#" onclick="openRegistration()">Appointment</a>
+        <a href="#" onclick="openContactUs()">Contact</a>
+        <a href="#" onclick="openFAQ()">FAQ's</a>
+
+      </div>
+    <div class="main-section">
+        <div class="image-container">
+            <img src="no1.webp" alt="Image 1">
+            <img src="no2.webp" alt="Image 2">
+            <img src="no3.webp" alt="Image 3">
+            <img src="no4.webp" alt="Image 4">
+            <img src="no5.webp" alt="Image 5">
+            <img src="no1about.webp" alt="Image 6">
+            <img src="no2about.webp" alt="Image 7">
+            <img src="no3about.webp" alt="Image 8">
+            <img src="no4about.webp" alt="Image 9">
+            <img src="no5about.webp" alt="Image 0">
+            <img src="no6about.webp" alt="Image 09">
+            <img src="no7about.webp" alt="Image 08">
+            <img src="no8about.webp" alt="Image 07">
+          </div>
+          <div class="heading">
+            <h2>About Our Clinic</h2>
+            <h3>Your Health, Our Priority: Compassionate Care You Can Trust</h3>
+          </div>
+          <div class="about">
+            <div class="who">
+              <h2>Who We Are</h2>
+              <p>Welcome to our Genetic Clinic, a dedicated space for expert genetic counseling and consultancy services. Our clinic is committed to providing accurate and personalized genetic guidance to individuals and families seeking insights into their genetic health.</p>
+            </div>
+            <div class="who">
+              <h2>What We Do</h2>
+              <p>At United Genetic Clinic, our mission is to offer comprehensive genetic counseling services. We provide insights into hereditary conditions, prenatal testing, family planning, and health management. Our experienced genetic counselors are here to support you in making informed decisions about your genetic health.</p>
+            </div>
+            <div class="who">
+              <h2>How We Work</h2>
+              <p>Our team of dedicated genetic counselors collaborates closely with each patient, ensuring a compassionate and supportive environment. We prioritize your well-being and provide personalized guidance, addressing your unique genetic concerns and needs. With United Genetic Clinic, you can make proactive choices for your health and the health of your family.</p>
+            </div>
+          </div>
+          <div class="heading">
+            <h2>Genetic Panels for Disease Risk Assessment</h2>
+            <h3>Click on the Pictures to View it!!!
+            </h3>
+          </div>
+          <div class="boxes">
+            <div class="box1">
+              
+              <h3>Tumor diseases</h3>
+              <p>APC, ATM, BAP1, BMPR1A, BRCA1, BRCA2, CDC73, CDH1, CDKN2A, CHEK2, EPCAM, FH, FLCN, MEN1, MLH1, MSH2, MSH6, MUTYH, NBN, NF1, NF2, PALB2, PMS2, POLD1, POLE, PTEN, RAD51C, RAD51D, RET, SDHA, SDHAF2, SDHB, SDHC, SDHD, SMAD4, SMARCA4, STK11, TMEM127, TP53, TSC1, TSC2, VHL</p>
+            </div>
+            <div class="box2">
+              <h3>Cardiovascular diseases</h3>
+              <p>ACTA2, ACTC1, ACTN2, ACVRL1, BAG3, BMPR2, CACNA1C, CALM1, CALM2, CAV1, COL3A1, CSRP3, DES, DMD, DSC2, DSG2, DSP, EMD, ENG, FBN1, FHL1, FLNC, GJA5, GLA, HCN4, JUP, KCNA5, KCND3, KCNE1, KCNE2, KCNH2, KCNJ2, KCNQ1, LAMP2, LDB3, LMNA, LOX, MYBPC3, MYH11, MYH6, MYH7, MYL2, MYL3, MYPN, NKX2-5, PKP2, PLN, PRKAG2, RBM20, RYR2, SCN1B, SCN5A, SMAD3, SMAD9, TBX4, TGFB2, TGFB3, TGFBR1, TGFBR2, TMEM43, TNNC1, TNNI3, TNNT2, TPM1, TRPM4, TTN, TTR, VCL</p>
+            </div><div class="box3">
+              <h3>
+                Thrombosis and coagulation disorders
+              </h3>
+              <p>
+                F10, F11, F13A1, F2, F5, F7, F8 (intronic inversions not covered), F9, HRG, PROC, PROS1, SERPINC1, SERPIND1, SERPINE1, SERPINF2, THBD, VWF
+
+
+              </p>
+            </div><div class="box4">
+              <h3>
+
+                Iron and copper storage disorders
+
+              </h3>
+              <p>
+                ATP7B, HAMP, HFE, HJV, SLC40A1, TFR2
+              </p>
+            </div><div class="box5">
+              <h3>
+                Hypercholesterolaemia & Glaucoma
+              </h3>
+              <p>
+                APOB, LDLR, LDLRAP1, PCSK9, CYP1B1, MYOC, OPTN
+              </p>
+              <h3>
+                Malignant hyperthermia 
+              </h3>
+              <p>
+                CACNA1S, RYR1
+              </p>
+            </div><div class="box6">
+              <h3>
+                Pharmacogenetics
+              </h3>
+              <p>
+                CACNA1S, CYP2B6, CYP2C19, CYP2C9, CYP2D6, CYP3A4, CYP3A5, CYP4F2, DPYD, HLA-A, HLA-B, IFNL3, MT-RNR1, NUDT15, POR, RYR1, SLCO1B1, TPMT, UGT1A1, VKORC1
+              </p>
+            </div><div class="box7">
+              <h3>
+                Colorectal cancer
+              </h3>
+              <p>
+                APC, AXIN2, BMPR1A, CDH1, CHEK2, EPCAM, FLCN, GREM1, MLH1, MSH2, MSH3, MSH6, MUTYH, NBN, NTHL1, PMS2, POLD1, POLE, PTEN, RINT1, RNF43, RPS20, SCG5, SMAD4, STK11, TP53
+              </p>
+            </div>
+            <div class="box8">
+              <h3>
+                Polyposis Syndrome
+              </h3>
+              <p>
+                APC, BMPR1A, CHEK2, GREM1, MSH3, MUTYH, NTHL1, POLD1, POLE, PTEN, RNF43, SCG5, SMAD4, STK11
+              </p>
+            </div><div class="box9">
+              <h3>
+                Lynch Syndrome
+              </h3>
+              <p>
+                EPCAM, MLH1, MSH2, MSH6, PMS2
+              </p>
+              <h3>
+                Associated MLPA-Set
+              </h3>
+              <p>
+                MLH1, MSH2, PMS2, MSH6, EPCAM
+
+
+              </p>
+            </div>
+
+          </div>
+    </div>
+    <div class="footer">
+        &copy; 2023 Dr. XYZ. All rights reserved.
+      </div>
+    <script>
+        function openHome() {
+    window.open('../home/index.html',);
+}
+function openAboutUs(){
+    window.open('../about/about.html');
+}
+function openRegistration(){
+    window.open('../home/register.html');
+}
+function openContactUs(){
+    window.open('../contact/cont.html');
+}
+function openFAQ(){
+        window.open('../FAQ/faq.html');
+    }
+         const images = document.querySelectorAll('.image-container img');
+let currentImageIndex = 0;
+
+function showNextImage() {
+  images[currentImageIndex].style.opacity = '0';
+  
+  // Increment currentImageIndex
+  currentImageIndex = (currentImageIndex + 1) % images.length;
+
+  // Show the next image
+  images[currentImageIndex].style.opacity = '1';
+
+  // Hide previous image after transition
+  images[currentImageIndex].addEventListener('transitionend', () => {
+    images[(currentImageIndex + images.length - 1) % images.length].style.opacity = '0';
+  });
+}
+
+setInterval(showNextImage, 5000);function toggleNavbar() {
+    const toggleLinks = document.getElementById('toggleLinks');
+    toggleLinks.classList.toggle('show');
+}
+    </script>
+</body>
+</html>

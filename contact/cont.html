@@ -1,0 +1,533 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact || Genetic Consultancy and Counselling Clinic</title>
+    <style>
+          body, h1, h2, h3, p, ul, li {
+    margin: 0;
+    padding: 0;
+  }
+  body, h1, h2, h3, p, ul, li {
+    margin: 0;
+    padding: 0;
+  }
+
+  body {
+    text-decoration: none;
+    list-style: none;
+    font-family: Arial, sans-serif;
+  }
+  
+  .navbar {
+    background-color: #333;
+    color: #fff;
+    padding: 10px;
+    text-align: center;
+
+  }
+  
+  .navbar a {
+    font-weight: bold;
+    color: #fff;
+    text-decoration: none;
+    margin: 0 15px;
+  }
+  /* Original navbar styles (unchanged) */
+.navbar {
+  background-color: #ffffff;
+  color: #fff;
+  padding: 15px;
+  text-align: center;
+}
+
+.navbar a {
+  color: #007bff;
+  text-decoration: none;
+  margin: 0 20px;
+  position: relative;
+  transition: color 0.3s ease, transform 0.3s ease;
+}
+
+/* Add animation on hover */
+.navbar a::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 2px;
+  background-color: black; /* Initial background color (transparent) */
+  bottom: -6px; /* Position it below the link */
+  left: 0;
+  transform: scaleX(0); /* Start with no width */
+  transform-origin: left center;
+  transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+.navbar a:hover {
+  animation: slideIn 0.3s forwards;
+  color: black;
+  
+}
+
+.navbar a:hover::before {
+  transform: scaleX(1); /* Expand the width on hover */
+  background-color: black; /* Change the background color on hover */
+}
+ .image {
+    
+    width:  100%;/* Adjust the container width as needed */
+    height: 500px; /* Adjust the container height as needed */
+    /* overflow: hidden; */
+    position: relative;
+    margin-bottom: 30px;
+  }
+
+  /* Styles for the images */
+ .image img {
+    width: 100%;
+    height: 100%;
+    /* object-fit: cover; */
+    position: absolute;
+    top: 0;
+    left: 0;
+    /* opacity: 0; */
+    /* transition: opacity 1s ease-in-out; */
+    /* z-index: 0; */
+  }
+      
+.footer {
+    background-color: #333;
+    color: #fff;
+    padding: 15px;
+    text-align: center;
+  }
+  .heading h2 {
+    font-size: 36px;
+    font-weight: bold;
+    color: #007bff;
+    font-family: 'Times New Roman', Times, serif;
+    /* background-color: #007bff; */
+    /* padding: 20px; */
+    margin: 0;
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  .main-section {
+    list-style: none;
+    padding-top: 5px;
+    padding-bottom: 50px;
+    text-align: center;
+    background-color: #f7f7f7;
+  }
+  .contact-info{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  margin-top: 70px;
+  margin-bottom: 70px;
+  /* margin: 60px; */
+  font-size: x-large;
+}
+
+.one{
+  
+  margin-left: 60px;
+  align-items: center;
+  text-align: center;
+}
+.two{
+  
+  margin-left: 60px;
+
+  align-items: center;
+  text-align: center;
+}
+.three{
+  
+
+  text-align: center;
+  align-items: center;
+  margin-left: 60px;
+}
+
+.one::before{
+  
+    content: "";
+    display: block;
+    width: 80px;
+    height: 3px;
+    background-color: #007bff;
+
+    margin: 0 auto 10px;
+}
+  
+.one::after {
+    content: "";
+    display: block;
+    width: 40px;
+    height: 3px;
+    background-color: #007bff;
+
+    margin: 10px auto;
+}
+.two::before{
+  
+  content: "";
+  display: block;
+  width: 80px;
+  height: 3px;
+  background-color: #007bff;
+
+  margin: 0 auto 10px;
+}
+
+.two::after {
+  content: "";
+  display: block;
+  width: 40px;
+  height: 3px;
+  background-color: #007bff;
+
+  margin: 10px auto;
+}
+.three::before{
+  
+  content: "";
+  display: block;
+  width: 80px;
+  height: 3px;
+  background-color: #007bff;
+
+  margin: 0 auto 10px;
+}
+
+.three::after {
+  content: "";
+  display: block;
+  width: 40px;
+  height: 3px;
+  background-color: #007bff;
+
+  margin: 10px auto;
+}
+.location-info{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 70px;
+  /* margin: 60px; */
+  font-size: x-large;
+}
+.location-info::before{
+  
+  content: "";
+  display: block;
+  width: 80px;
+  height: 3px;
+  background-color: #007bff;
+
+  margin: 0 auto 10px;
+}
+
+.location-info::after {
+  content: "";
+  display: block;
+  width: 40px;
+  height: 3px;
+  background-color: #007bff;
+  margin: 10px auto;
+}
+.location-info p{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+.wizard{
+  font-family: Roboto;
+  background: #ffffff;
+  font-size: 30px;
+  cursor:url("https://i.ibb.co/znc4JFh/cursor-1.png"), auto;
+}
+.card-side.back {
+  transform: rotateY(-180deg);
+  background-color: #4158D0;
+  background-image: linear-gradient(43deg, black, gray,silver);
+}
+.card-side.front {
+    text-align: center;
+    align-items: center;
+    margin: auto;
+    justify-content: center;
+  background-color: black;
+  background-image: linear-gradient(160deg, #007bff 0%, gray 100%);
+}
+
+.card:hover .card-side.front {
+  transform: rotateY(180deg);
+}
+
+.card:hover .card-side.back {
+  transform: rotateY(0deg);
+}
+.card {
+  perspective: 150rem;
+  margin: 2em auto;
+  height: 30rem;
+  max-width: 400px;
+  box-shadow: none;
+  background: none;
+}
+.card-side {
+  height: 25rem;
+  border-radius: 15px;
+  transition: all 0.8s ease;
+  backface-visibility: hidden;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 80%;
+  padding: 2rem;
+  color: white;
+  
+}.toggle-menu {
+    display: none;
+    justify-content: flex-end;
+    align-items: center;
+    background-color: #ffffff;
+    padding: 10px;
+}
+
+.toggle-icon {
+    font-size: 24px;
+    color: #007bff;
+    cursor: pointer;
+}
+
+.toggle-icon:hover {
+  /* animation: slideIn 0.3s forwards; */
+  color: black;
+  
+}
+.toggle-links {
+    display: none;
+    flex-direction: column;
+    background-color: #ffffff;
+    padding: 10px;
+}
+.toggle-links a{
+  color: #007bff;
+  text-decoration: none;
+  margin: 5px;
+}
+.toggle-links a::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 2px;
+  background-color: black; /* Initial background color (transparent) */
+  bottom: -6px; /* Position it below the link */
+  left: 0;
+  transform: scaleX(0); /* Start with no width */
+  transform-origin: left center;
+  transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+.toggle-links a:hover {
+  animation: slideIn 0.3s forwards;
+  color: black;
+  
+}
+
+.toggle-links a:hover::before {
+  transform: scaleX(1); /* Expand the width on hover */
+  background-color: black; /* Change the background color on hover */
+}
+.toggle-links.show {
+    display: flex;
+    transition: max-height 0.3s ease-in-out, opacity 0.3s ease-in-out 0.3s;
+}
+
+/* Media query for screens narrower than 600px */
+@media (max-width: 600px) {
+    .navbar {
+        display: none;
+    }
+
+    .toggle-menu {
+        display: flex;
+    }
+}
+.consult{
+    
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+}
+.talk{
+    font-weight: bold;
+     
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+}
+ 
+ .whatsapp-icon  {
+  position: fixed;
+  margin: auto;
+    padding: 120px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 80px;
+  height: 80px;
+  z-index: 999;
+  transition: transform 0.3s ease-in-out;
+} 
+
+.whatsapp-icon img {
+  width: 80px;
+  height: 80px;
+  border-radius: 30%;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  
+}
+
+.whatsapp-icon:hover {
+  transform: scale(1.1);
+}
+@media (max-width:600px){
+  .contact-info{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 70px;
+    margin-left: 0px;
+    /* margin: 60px; */
+    font-size: larger;
+  }
+  .location-info{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    /* margin: 70px; */
+    /* margin: 60px; */
+    font-size: larger;
+  }
+  footer p {
+    font-size: 11px;
+    color: #ffffff;
+    text-decoration: #000000;
+    }
+    .navbar a{
+        font-size: smaller;
+    }
+    .one,.two,.three{
+      margin-left: 0;
+    }
+}
+@media (max-width:400px){
+  .navbar a{
+    font-size: 10px;
+  }
+}
+    </style>
+</head>
+<body><div class="toggle-menu">
+  <span class="toggle-icon" onclick="toggleNavbar()">&#9776;</span>
+  <div class="toggle-links" id="toggleLinks">
+      <a href="#" onclick="openHome()">Home</a>
+      <a href="#" onclick="openAboutUs()">About</a>
+      <a href="#" onclick="openRegistration()">Appointment</a>
+      <a href="#" onclick="openContactUs()">Contact</a>
+      <a href="#" onclick="openFAQ()">FAQ's</a>
+  </div>
+</div>
+    <div class="navbar">
+        <a href="#" onclick="openHome()">Home</a>
+        <a href="#" onclick="openAboutUs()">About</a>
+        <a href="#" onclick="openRegistration()">Appointment</a>
+        <a href="#" onclick="openContactUs()">Contact</a>
+        <a href="#" onclick="openFAQ()">FAQ's</a>
+
+      </div>
+      <div class="main-section">
+
+          <div class="image">
+              <img id="image1" src="no2.webp" alt="" />
+              
+            </div>
+            <div class="heading">
+                <h2>Contact Us</h2>
+            </div>
+           
+        </div>
+        <div class="wizard">
+
+            <div class="card">
+                <div class="card-side front">
+                    <div class="consult">
+                        <h3>For Online Consultation</h3>
+                        <p>Flip This</p>
+                    </div>
+                </div>
+                <div class="card-side back">
+                    <div class="talk">Just Click Here to talk with our Agent</div>
+                    <a href="https://wa.me/03083291997?text=Hey, I want to grab some info about your work!!!" target="_blank" class="whatsapp-icon">
+                        <img src="whatsapp.jpg" alt="WhatsApp Icon">
+                        </a>
+                </div>
+            </div>
+        </div>
+        <div class="contact-info">
+            <div class="one">
+    
+                <h3 class="contact-label">For queries, contact:</h3>
+                <p class="contact-number">XYZ</p>
+            </div>
+            <div class="two">
+    
+                <h3 class="contact-label">For direct conversation, contact:</h3>
+                <p class="contact-number">XYZ</p>
+            </div>
+            <div class="three">
+    
+                <h3 class="contact-label">For job seekers, contact:</h3>
+                <p class="contact-number">XYZ</p>
+            </div>
+        </div>
+        <div class="location-info">
+            <h3 class="location-heading">Location of our Office</h3>
+            <p class="location-address">XYZ</p>
+        </div>
+            <div class="footer">
+        &copy; 2023 Dr. XYZ. All rights reserved.
+      </div>
+   <script>function toggleNavbar() {
+    const toggleLinks = document.getElementById('toggleLinks');
+    toggleLinks.classList.toggle('show');
+}
+    function openHome() {
+    window.open('../home/index.html',);
+}
+function openAboutUs(){
+    window.open('../about/about.html');
+}
+function openRegistration(){
+    window.open('../home/register.html');
+}
+function openContactUs(){
+    window.open('../contact/cont.html');
+}function openFAQ(){
+        window.open('../FAQ/faq.html');
+    }
+   </script>
+</body>
+</html>

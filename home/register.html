@@ -1,0 +1,593 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Appointment || Genetic Consultancy and Counselling Clinic</title>
+    <script type="module" src="script.js"></script>
+
+    <style>
+          body, h1, h2, h3, p, ul, li {
+    margin: 0;
+    padding: 0;
+  }
+
+  body {
+    text-decoration: none;
+    list-style: none;
+    font-family: Arial, sans-serif;
+  }
+  
+  .navbar {
+    background-color: #333;
+    color: #fff;
+    padding: 10px;
+    text-align: center;
+
+  }
+  
+  .navbar a {
+    font-weight: bold;
+    color: #fff;
+    text-decoration: none;
+    margin: 0 15px;
+  }
+  /* Original navbar styles (unchanged) */
+.navbar {
+  background-color: #ffffff;
+  color: #fff;
+  padding: 15px;
+  text-align: center;
+}
+
+.navbar a {
+  color: #007bff;
+  text-decoration: none;
+  margin: 0 20px;
+  position: relative;
+  transition: color 0.3s ease, transform 0.3s ease;
+}
+
+/* Add animation on hover */
+.navbar a::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 2px;
+  background-color: black; /* Initial background color (transparent) */
+  bottom: -6px; /* Position it below the link */
+  left: 0;
+  transform: scaleX(0); /* Start with no width */
+  transform-origin: left center;
+  transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+.navbar a:hover {
+  animation: slideIn 0.3s forwards;
+  color: black;
+  
+}
+
+.navbar a:hover::before {
+  transform: scaleX(1); /* Expand the width on hover */
+  background-color: black; /* Change the background color on hover */
+}
+@keyframes slideIn {
+  0% {
+      opacity: 0;
+      transform: translateX(-20px);
+  }
+  100% {
+      opacity: 1;
+      transform: translateX(0);
+  }
+}
+.navbar a {
+  animation: slideIn 1s ease-in-out;
+  animation-fill-mode: both;
+  animation-delay: calc(var(--animation-order) * 0.15s);
+}
+.navbar:nth-child(1) {
+  --animation-order: 1;
+}
+
+.navbar:nth-child(2) {
+  --animation-order: 2;
+}
+
+.navbar:nth-child(3) {
+  --animation-order: 3;
+}
+
+.navbar:nth-child(4) {
+  --animation-order: 4;
+}
+#registration-section {
+    width: 600px;
+    margin: 30px auto;
+    background-color: #fff;
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+}
+@import url(https://fonts.googleapis.com/css?family=Oswald:400,700);
+@import url(https://fonts.googleapis.com/css?family=Open+Sans);
+body{
+  background: #F0F0F0;
+  font-family: Open Sans ,sans-serif;
+  line-height:1.5em;
+}
+#contact {
+width: 500px;
+margin:2em auto;
+background:white;
+position: relative;
+}
+#contact::after {
+content: "";
+display: block;
+height: 30px;
+width: 90%;
+left: 5%;
+bottom: 0;
+position: absolute;
+-webkit-box-shadow: 0 5px 15px 0 rgba(0, 0, 0, 0.19);
+box-shadow: 0 5px 15px 0 rgba(0, 0, 0, 0.19);
+border-radius: 100%;
+z-index: -1;
+}
+.toggle-menu {
+    display: none;
+    justify-content: flex-end;
+    align-items: center;
+    background-color: #ffffff;
+    padding: 10px;
+}
+
+.toggle-icon {
+    font-size: 24px;
+    color: #007bff;
+    cursor: pointer;
+}
+
+.toggle-icon:hover {
+  /* animation: slideIn 0.3s forwards; */
+  color: black;
+  
+}
+.toggle-links {
+    display: none;
+    flex-direction: column;
+    background-color: #ffffff;
+    padding: 10px;
+}
+.toggle-links a{
+  color: #007bff;
+  text-decoration: none;
+  margin: 5px;
+}
+.toggle-links a::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 2px;
+  background-color: black; /* Initial background color (transparent) */
+  bottom: -6px; /* Position it below the link */
+  left: 0;
+  transform: scaleX(0); /* Start with no width */
+  transform-origin: left center;
+  transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+.toggle-links a:hover {
+  animation: slideIn 0.3s forwards;
+  color: black;
+  
+}
+
+.toggle-links a:hover::before {
+  transform: scaleX(1); /* Expand the width on hover */
+  background-color: black; /* Change the background color on hover */
+}
+.toggle-links.show {
+    display: flex;
+    transition: max-height 0.3s ease-in-out, opacity 0.3s ease-in-out 0.3s;
+}
+
+/* Media query for screens narrower than 600px */
+@media (max-width: 600px) {
+    .navbar {
+        display: none;
+    }
+
+    .toggle-menu {
+        display: flex;
+    }
+}
+#contact article {
+  padding: 1em;
+}
+#contact h1 {
+background: #007bff;
+font-family: Oswald ,sans-serif;
+font-size: 1.75em;
+padding: 0.6em 0 0.6em 0.4em;
+color: white;
+text-shadow: 0 0.06em 0 #424242;
+position: relative;
+}
+.contactbutton {
+background: #007bff;
+-webkit-box-shadow: 1px 1px 0 0 #007bff,2px 2px 0 0 #007bff,3px 3px 0 0 #007bff;
+box-shadow: 1px 1px 0 0 #007bff,2px 2px 0 0 #007bff,3px 3px 0 0 #007bff;
+text-align: center;
+display: block;
+width: 100%;
+height: 50px;
+margin-top: 20px;
+margin-bottom: 2px;
+cursor: pointer;
+}
+.contactbutton:hover {
+-webkit-box-shadow: 1px 1px 0 0 #007bff,0px 0px 0 0 #007bff,0px 0px 0 0 #007bff;
+box-shadow: 1px 1px 0 0 #007bff,0px 0px 0 0 #007bff,0px 0px 0 0 #007bff;
+margin-top: 22px;
+margin-left: 2px;
+margin-bottom: 0px;
+}
+.mail {
+margin-top: 11px;
+font-size: 15px;
+display: inline-block;
+border-top: 2em solid transparent;
+border-left: 2.6em solid #d9dee2;
+height: 0;
+width: 0;
+position: relative;
+}
+.mail:before {
+content: '';
+top: -2.5em;
+left: -2.95em;
+display: block;
+position: absolute;
+border-top: 1.2em solid #d9dee2;
+border-left: 1.6em solid transparent;
+border-right: 1.6em solid transparent;
+border-bottom: 1em solid transparent;
+font-size: 0.8em;
+}
+.mail::after {
+display: block;
+content: "";
+position: absolute;
+border-top: 2em solid transparent;
+border-right: 2.6em solid #d9dee2;
+height: 0;
+width: 0;
+left: -2.18em;
+bottom: 0;
+}
+#checkcontact{
+position: absolute;
+left: -9999px;
+}
+.contactform {
+overflow: hidden;
+max-height: 0px;
+-webkit-transition: all linear 1s;
+-moz-transition: all linear 1s;
+-o-transition: all linear 1s;
+-ms-transition: all linear 1s;
+transition: all linear 1s;
+}
+#checkcontact:checked + .contactform {
+max-height: 1000px;
+}
+.input_wrapper {
+position: relative;
+}
+.textarea_wrapper textarea {
+margin-top: 20px;
+display: block;
+width: 100%;
+background: white;
+border: 1px solid #DADADA;
+box-shadow: 0 0 1px 0 #E4E4E4;
+-webkit-box-sizing: border-box;
+-moz-box-sizing: border-box;
+box-sizing: border-box;
+padding: 1em;
+-webkit-transition: all 250ms ease;
+-moz-transition: all 250ms ease;
+-ms-transition: all 250ms ease;
+-o-transition: all 250ms ease;
+transition: all 250ms ease;
+color: #5E5E5E;
+}
+.input_wrapper input[type="text"] {
+margin-top: 1em;
+display: block;
+width: 100%;
+background: white;
+border: 1px solid #DADADA;
+box-shadow: 0 0 1px 0 #E4E4E4;
+-webkit-box-sizing: border-box;
+-moz-box-sizing: border-box;
+box-sizing: border-box;
+padding: 1em;
+-webkit-transition: all 250ms ease;
+-moz-transition: all 250ms ease;
+-ms-transition: all 250ms ease;
+-o-transition: all 250ms ease;
+transition: all 250ms ease;
+color: #5E5E5E;
+text-indent: 15%;
+}
+.input_wrapper input[type="text"]:focus {
+background: rgba(242, 56, 90, 0.05);
+box-shadow: inset 2px 2px 5px 0 #DADADA;
+outline: none;
+text-indent: 0;
+}
+.input_wrapper label {
+position: absolute;
+left: 0;
+top: 0;
+height: 100%;
+background: #007bff;
+color: white;
+font-family: Oswald ,sans-serif;
+box-sizing: border-box;
+width: 15%;
+text-align: center;
+line-height: 2.8em;
+-webkit-transition: all 250ms ease;
+-moz-transition: all 250ms ease;
+-ms-transition: all 250ms ease;
+-o-transition: all 250ms ease;
+transition: all 250ms ease;
+}
+.footer {
+  margin-top: 360px;
+    background-color: #333;
+    color: #fff;
+    padding: 15px;
+    text-align: center;
+  }
+.input_wrapper input[type="text"]:focus + label {
+left: 85%;
+}
+.textarea_wrapper textarea {
+margin-top: 20px;
+display: block;
+width: 100%;
+  min-height:150px;
+background: white;
+border: 1px solid #DADADA;
+box-shadow: 0 0 1px 0 #E4E4E4;
+-webkit-box-sizing: border-box;
+-moz-box-sizing: border-box;
+box-sizing: border-box;
+padding: 1em;
+-webkit-transition: all 250ms ease;
+-moz-transition: all 250ms ease;
+-ms-transition: all 250ms ease;
+-o-transition: all 250ms ease;
+transition: all 250ms ease;
+color: #5E5E5E;
+}
+.textarea_wrapper textarea:focus {
+background: rgba(242, 56, 90, 0.05);
+box-shadow: inset 2px 2px 5px 0 #DADADA;
+outline: none;
+}
+.submit_wrapper {
+text-align: center;
+}
+.submit_wrapper input {
+text-align: center;
+display: inline-block;
+width: 40%;
+height: 50px;
+margin-top: 1em;
+margin-bottom: 6px;
+cursor: pointer;
+background: #007bff;
+color: white;
+font-family: Oswald ,sans-serif;
+font-size: 1em;
+border: none;
+-webkit-box-shadow: 1px 1px 0 0 black,2px 2px 0 0 black,3px 3px 0 0 black;
+box-shadow: 1px 1px 0 0 black,2px 2px 0 0 black,3px 3px 0 0 black;
+/* -webkit-appearance: none; */
+  -webkit-transition: all 250ms ease;
+-moz-transition: all 250ms ease;
+-ms-transition: all 250ms ease;
+-o-transition: all 250ms ease;
+transition: all 250ms ease;
+}
+.submit_wrapper input:hover {
+-webkit-box-shadow: 1px 1px 0 0 #007bff,0px 0px 0 0 #007bff,0px 0px 0 0 #007bff;
+box-shadow: 1px 1px 0 0 #007bff,0px 0px 0 0 #007bff,0px 0px 0 0 #007bff;
+margin-top: 22px;
+margin-left: 2px;
+margin-bottom: 0px;
+ }
+ /* #contact_upload_wrapper{
+  margin-top: 20px;
+  position: relative;
+
+}  */
+#contact_upload_wrapper {
+  margin-top: 20px;
+  position: relative;
+}
+
+#contact_upload {
+  display: none;
+}
+
+#upload_label {
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 70%;
+  background: #007bff;
+  color: white;
+  font-family: Oswald, sans-serif;
+  box-sizing: border-box;
+  text-align: center;
+  line-height: 2.8em;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+#upload_text {
+  display: inline-block;
+  width: 30%;
+  background: #007bff;
+  color: white;
+  font-family: Oswald, sans-serif;
+  text-align: center;
+  line-height: 2.8em;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+#contact_upload_wrapper:hover #upload_label {
+  background-color: #0056b3; /* Change color on hover */
+}
+
+#contact_upload_wrapper:hover #upload_text {
+  background-color: #0056b3; /* Change color on hover */
+}
+#payment_section {
+  margin-top: 30px;
+  padding: 20px;
+  background-color: #f7f7f7;
+  border-radius: 5px;
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+#payment_section h2 {
+  font-size: 1.2em;
+  margin-bottom: 10px;
+}
+
+#payment_section p {
+  font-size: 0.9em;
+  margin-bottom: 15px;
+}
+
+#payment_section ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+#payment_section ul li {
+  margin-bottom: 5px;
+}
+
+#payment_section ul li:last-child {
+  margin-bottom: 0;
+}
+
+#payment_section a {
+  color: #007bff;
+  text-decoration: underline;
+}
+@media (max-width: 500px){
+#contact {
+width: 100%;
+}
+  .input_wrapper label {
+line-height: 3.5em;
+font-size: 0.8em;
+}
+}   </style>
+</head>
+<body>
+  <div class="toggle-menu">
+    <span class="toggle-icon" onclick="toggleNavbar()">&#9776;</span>
+    <div class="toggle-links" id="toggleLinks">
+        <a href="#" onclick="openHome()">Home</a>
+        <a href="#" onclick="openAboutUs()">About</a>
+        <a href="#" onclick="openRegistration()">Appointment</a>
+        <a href="#" onclick="openContactUs()">Contact</a>
+        <a href="#" onclick="openFAQ()">FAQ's</a>
+    </div>
+</div>
+        <div class="navbar">
+            <a href="#" onclick="openHome()">Home</a>
+            <a href="#" onclick="openAboutUs()">About</a>
+            <a href="#" onclick="openRegistration()">Appointment</a>
+            <a href="#" onclick="openContactUs()">Contact</a>
+        <a href="#" onclick="openFAQ()">FAQ's</a>
+
+          </div>
+          <section id="contact">
+            <div class="sectionheader">	<h1>Reservation of your Appointment</h1></div>
+            <article>
+            <p>If you're looking to schedule an appointment, kindly complete the form below and submit. Feel free to use the information provided below for any further assistance.</p>
+              
+                <label for="checkcontact" class="contactbutton"><div class="mail"></div></label><input id="checkcontact" type="checkbox">
+            
+                <form action="http://localhost:3001/submit" method="post" class="contactform">
+                  <p class="input_wrapper"><input type="text" name="contact_name" value=""  id ="contact_nom"><label for="contact_name">NAME</label></p>
+                  <p class="input_wrapper"><input type="text" name="contact_email" value=""  id ="contact_email"><label for="contact_email">EMAIL</label></p>
+                  <p class="input_wrapper"><input type="text" name="contact_subject" value=""  id ="contact_subject"><label for="contact_num">NUMBER</label></p>
+                  <p class="input_wrapper"><input type="text" name="contact_cnic" value=""  id ="contact_cnic"><label for="contact_cnic">CNIC</label></p>
+                  <!-- <p class="input_wrapper" id="contact_upload_wrapper"> -->
+                    <!-- <input type="file" accept=".pdf,.png" name="file_upload" id="contact_upload">
+                    <label for="contact_upload" id="upload_label">Choose File</label>
+                    <span id="upload_text">Upload</span> -->
+                   
+                  <p class="textarea_wrapper"><textarea name="contact_message" id="contact_message"placeholder="Tell us about your Query"></textarea></p>
+                  <div id="payment_section">
+                    <h2>Reservation Payment Instructions</h2>
+                    <p>If you want to reserve an appointment, please follow these steps:</p>
+                    <ol>
+                      <li>Pay 1500 Rs to the following account via online transfer:</li>
+                      <ul>
+                        <li>Bank: XYZ Bank</li>
+                        <li>Account Name: Your Name</li>
+                        <li>Account Number: 123456789</li>
+                      </ul>
+                      <li>After making the payment, take a screenshot or save the receipt as a PDF.</li>
+                      <li>Email the receipt to our Gmail address: <a href="mailto:reservation@example.com">reservation@example.com</a></li>
+                    </ol>
+                  </div>
+                  <p class="submit_wrapper"><input type="submit" value="GET RESERVATION"></p>			
+                </form>
+            </article>
+          </section>
+              
+          <div class="footer">
+            &copy; 2023 Dr. XYZ. All rights reserved.
+          </div>
+       
+    <script>function toggleNavbar() {
+      const toggleLinks = document.getElementById('toggleLinks');
+      toggleLinks.classList.toggle('show');
+  }
+        function openHome() {
+    window.open('../home/index.html',);
+}
+function openAboutUs(){
+    window.open('../about/about.html');
+}
+function openRegistration(){
+    window.open('../home/register.html');
+}
+function openContactUs(){
+    window.open('../contact/cont.html');
+}
+function openFAQ(){
+        window.open('../FAQ/faq.html');
+    }
+    </script>
+</body>
+</html>
